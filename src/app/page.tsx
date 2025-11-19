@@ -18,7 +18,7 @@ export default function Home() {
             className="h-8 w-auto"
           />
           <Image 
-            src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2Fima%2Flogoslostarship.png?alt=media&token=8eda5daf-b317-4849-b256-8d189beda6fe"
+            src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2Fima%2Flogoslonileblue.png?alt=media&token=712acefa-2a3a-411d-9842-f94d944df8ec"
             alt="Ima Logo"
             width={80}
             height={32}
@@ -50,7 +50,7 @@ export default function Home() {
         <section id="what-is-ima" className="py-20 sm:py-24 bg-secondary/50">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline flex items-center justify-center gap-2">¿Qué es <Image src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2Fima%2Flogoslostarship.png?alt=media&token=8eda5daf-b317-4849-b256-8d189beda6fe" alt="Ima Logo" width={120} height={48} className="h-12 w-auto" />?</h2>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline flex items-center justify-center gap-2">¿Qué es <Image src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2Fima%2Flogoslonileblue.png?alt=media&token=712acefa-2a3a-411d-9842-f94d944df8ec" alt="Ima Logo" width={120} height={48} className="h-12 w-auto" />?</h2>
               <p className="mt-4 text-lg text-muted-foreground">
                 <span className="font-bold">ima</span> es tu aliado para el bienestar integral. Te ofrecemos un ecosistema de salud preventiva y correctiva, accesible y fácil de usar.
               </p>
@@ -119,7 +119,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-12">
           <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
             <div className="flex flex-col items-center gap-4 md:items-start">
-              <Image src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2Fima%2Flogoslostarship.png?alt=media&token=8eda5daf-b317-4849-b256-8d189beda6fe" alt="Ima Logo" width={160} height={64} className="h-16 w-auto" />
+              <Image src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2Fima%2Flogoslonileblue.png?alt=media&token=712acefa-2a3a-411d-9842-f94d944df8ec" alt="Ima Logo" width={160} height={64} className="h-16 w-auto" />
               <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} ima. Todos los derechos reservados.</p>
             </div>
             <div className="grid grid-cols-2 gap-8 text-center sm:grid-cols-3 md:text-left">
