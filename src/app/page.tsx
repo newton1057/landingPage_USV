@@ -37,7 +37,7 @@ export default function Home() {
             Tu bienestar, nuestra prioridad.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Accede a consultas médicas, nutricionales y psicológicas ilimitadas con tu vale Sí Vale.
+            Descubre el poder de la IA y toma el control de tu salud con más de 25 herramientas de prevención y bienestar.
           </p>
           <div className="mt-10">
             <Button size="lg">
@@ -85,17 +85,17 @@ export default function Home() {
                 <ActivationStep
                   step="01"
                   title="Regístrate"
-                  description="Haz clic en 'Activar tu beneficio' y completa el formulario."
+                  description="Haz clic en 'Activar tu beneficio' y completa tu información."
                 />
                 <ActivationStep
                   step="02"
                   title="Descarga la App"
-                  description="Encuentra 'ima' en la App Store o Google Play y descárgala."
+                  description="Busca 'ima' en la App Store o Google Play y descárgala."
                 />
                 <ActivationStep
                   step="03"
-                  title="Ingresa y Disfruta"
-                  description="Inicia sesión con tu correo y la contraseña que te enviamos."
+                  title="Inicia Sesión"
+                  description="Usa tu correo y la contraseña que te enviamos para empezar."
                 />
               </div>
             </div>
