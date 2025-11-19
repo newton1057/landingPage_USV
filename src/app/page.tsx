@@ -1,7 +1,7 @@
 "use client"
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Sparkles, Camera, ArrowRight, Facebook, Instagram, Twitter, CalendarGift } from "lucide-react";
+import { Sparkles, Camera, ArrowRight, Facebook, Instagram, Twitter, Gift } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -77,7 +77,7 @@ export default function Home() {
             <div className="container mx-auto px-4">
                 <div className="mx-auto max-w-3xl text-center bg-background p-8 sm:p-12 rounded-xl border border-primary/20 shadow-lg shadow-primary/5">
                     <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mb-6">
-                        <CalendarGift className="h-8 w-8 text-primary" />
+                        <Gift className="h-8 w-8 text-primary" />
                     </div>
                     <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline text-primary">Un regalo de Sí Vale para ti</h2>
                     <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
