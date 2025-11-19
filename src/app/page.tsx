@@ -2,7 +2,16 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Stethoscope, Apple, BrainCircuit, Facebook, Instagram, Twitter, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { Logo } from "@/components/logo";
+
+const Logo = ({ className, size = 'default' }: { className?: string, size?: 'default' | 'large' | 'small' }) => {
+  const sizeClasses = {
+    default: 'text-3xl',
+    large: 'text-4xl',
+    small: 'text-2xl',
+  };
+  return <span className={`font-bold text-primary font-logo ${sizeClasses[size]} ${className}`}>ima</span>
+}
+
 
 export default function Home() {
   return (
@@ -34,9 +43,9 @@ export default function Home() {
         <section id="what-is-ima" className="py-20 sm:py-24">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline flex items-center justify-center gap-2">¿Qué es <Logo height={32} />?</h2>
+              <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline flex items-center justify-center gap-2">¿Qué es <Logo size="large" />?</h2>
               <p className="mt-4 text-lg text-foreground/80 flex items-center justify-center gap-1">
-                <Logo height={18} /> es tu aliado para el bienestar integral. Te ofrecemos un ecosistema de salud preventiva y correctiva, accesible y fácil de usar.
+                <Logo size="small" /> es tu aliado para el bienestar integral. Te ofrecemos un ecosistema de salud preventiva y correctiva, accesible y fácil de usar.
               </p>
             </div>
 
