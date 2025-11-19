@@ -60,13 +60,22 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <header className="container mx-auto flex items-center justify-between px-4 py-6">
-        <Image 
-          src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2FS%C3%AD%20Vale%2FSv_logo1.svg?alt=media&token=5e4d468c-7f2e-48ff-bdc7-9979c61d94ae" 
-          alt="Up SíVale Logo"
-          width={100}
-          height={32}
-          className="h-8 w-auto"
-        />
+        <div className="flex items-center gap-4">
+          <Image 
+            src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2FS%C3%AD%20Vale%2FSv_logo1.svg?alt=media&token=5e4d468c-7f2e-48ff-bdc7-9979c61d94ae" 
+            alt="Up SíVale Logo"
+            width={100}
+            height={32}
+            className="h-8 w-auto"
+          />
+          <Image 
+            src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2Fima%2Flogoslostarship.png?alt=media&token=8eda5daf-b317-4849-b256-8d189beda6fe"
+            alt="Ima Logo"
+            width={80}
+            height={32}
+            className="h-8 w-auto"
+          />
+        </div>
         <Button>
           Activa tu beneficio <ArrowRight className="ml-2" />
         </Button>
