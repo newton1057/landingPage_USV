@@ -50,7 +50,7 @@ export default function Home() {
             </div>
 
             {/* Feature Cards */}
-            <div className="mx-auto mt-16 grid max-w-md grid-cols-1 gap-8 sm:max-w-2xl lg:max-w-none lg:grid-cols-3">
+            <div className="mx-auto mt-16 grid max-w-md grid-cols-1 gap-8 sm:max-w-2xl lg:max-w-4xl lg:grid-cols-2">
               <FeatureCard
                 icon={<Sparkles className="h-8 w-8 text-primary" />}
                 title="Descubre de cuántos años te vez"
@@ -60,11 +60,6 @@ export default function Home() {
                 icon={<Camera className="h-8 w-8 text-primary" />}
                 title="Analiza tu comida con una foto"
                 description="Toma una foto de tu platillo y conoce sus detalles nutricionales."
-              />
-              <FeatureCard
-                icon={<MessageCircle className="h-8 w-8 text-primary" />}
-                title="Chatea con ima sobre tu salud"
-                description="Obtén respuestas a tus preguntas de salud con nuestro asistente de IA."
               />
             </div>
           </div>
