@@ -139,7 +139,22 @@ export default function Home() {
         <div className="container mx-auto px-4 py-12">
           <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
             <div className="flex flex-col items-center gap-4 md:items-start">
-              <Image src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2Fima%2Flogoslonileblue.png?alt=media&token=712acefa-2a3a-411d-9842-f94d944df8ec" alt="Ima Logo" width={160} height={64} className="h-16 w-auto" />
+              <div className="flex items-center gap-4">
+                  <Image 
+                    src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2FS%C3%AD%20Vale%2FSv_logo1.svg?alt=media&token=5e4d468c-7f2e-48ff-bdc7-9979c61d94ae" 
+                    alt="Up SíVale Logo"
+                    width={100}
+                    height={32}
+                    className="h-8 w-auto"
+                  />
+                  <Image 
+                    src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2Fima%2Flogoslonileblue.png?alt=media&token=712acefa-2a3a-411d-9842-f94d944df8ec"
+                    alt="Ima Logo"
+                    width={80}
+                    height={32}
+                    className="h-8 w-auto"
+                  />
+              </div>
               <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} ima. Todos los derechos reservados.</p>
             </div>
             <div className="grid grid-cols-2 gap-8 text-center sm:grid-cols-3 md:text-left">
