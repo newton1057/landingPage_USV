@@ -4,8 +4,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Sparkles, Camera, ArrowRight, Facebook, Instagram, Twitter, Gift } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function Home() {
+  const ageEstimationImage = PlaceHolderImages.find(img => img.id === 'age-estimation');
+  const foodAnalysisImage = PlaceHolderImages.find(img => img.id === 'food-analysis');
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <header className="container mx-auto flex items-center justify-between px-4 py-6">
@@ -66,11 +70,15 @@ export default function Home() {
                 icon={<Sparkles className="h-8 w-8 text-primary" />}
                 title="Descubre de cuántos años te vez"
                 description="Usa nuestra IA para analizar tu rostro y estimar tu edad."
+                imageUrl={ageEstimationImage?.imageUrl}
+                imageHint={ageEstimationImage?.imageHint}
               />
               <FeatureCard
                 icon={<Camera className="h-8 w-8 text-primary" />}
                 title="Analiza tu comida con una foto"
                 description="Toma una foto de tu platillo y conoce sus detalles nutricionales."
+                imageUrl={foodAnalysisImage?.imageUrl}
+                imageHint={foodAnalysisImage?.imageHint}
               />
             </div>
           </div>
@@ -182,18 +190,28 @@ export default function Home() {
   );
 }
 
-function FeatureCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
+function FeatureCard({ icon, title, description, imageUrl, imageHint }: { icon: React.ReactNode; title: string; description: string; imageUrl?: string; imageHint?: string }) {
   return (
-    <Card className="bg-background/80 text-left transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
-      <CardHeader>
-        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+    <Card className="bg-background/80 text-left transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 relative overflow-hidden group">
+      {imageUrl && (
+        <Image
+          src={imageUrl}
+          alt={title}
+          fill
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          data-ai-hint={imageHint}
+        />
+      )}
+      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-colors" />
+      <div className="relative flex flex-col h-full p-6">
+        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 backdrop-blur-sm">
           {icon}
         </div>
-        <CardTitle className="text-xl text-foreground font-headline">{title}</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p className="text-muted-foreground">{description}</p>
-      </CardContent>
+        <div className="flex-grow">
+          <CardTitle className="text-xl text-white font-headline">{title}</CardTitle>
+          <p className="text-white/80 mt-2">{description}</p>
+        </div>
+      </div>
     </Card>
   );
 }

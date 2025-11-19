@@ -1,3 +1,16 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "age-estimation",
+      "description": "A person's face for age estimation feature.",
+      "imageUrl": "https://images.unsplash.com/photo-1650418988726-a03b31e504e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmYWNlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYzNTgwNzA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "face portrait"
+    },
+    {
+      "id": "food-analysis",
+      "description": "A plate of healthy food for food analysis feature.",
+      "imageUrl": "https://images.unsplash.com/photo-1539136788836-5699e78bfc75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb29kJTIwcGxhdGV8ZW58MHx8fHwxNzYzNTQyNTg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "food plate"
+    }
+  ]
 }
