@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="container mx-auto flex items-center justify-between px-4 py-6">
-        <Logo />
+        <h1 className="text-3xl font-bold text-primary font-logo">ima</h1>
         <Button>
           Activa tu beneficio <ArrowRight className="ml-2" />
         </Button>
@@ -43,9 +43,9 @@ export default function Home() {
         <section id="what-is-ima" className="py-20 sm:py-24">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline flex items-center justify-center gap-2">¿Qué es <Logo size="large" />?</h2>
+              <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline flex items-center justify-center gap-2">¿Qué es <span className="text-4xl font-bold text-primary font-logo">ima</span>?</h2>
               <p className="mt-4 text-lg text-foreground/80 flex items-center justify-center gap-1">
-                <Logo size="small" /> es tu aliado para el bienestar integral. Te ofrecemos un ecosistema de salud preventiva y correctiva, accesible y fácil de usar.
+                <span className="text-2xl font-bold text-primary font-logo">ima</span> es tu aliado para el bienestar integral. Te ofrecemos un ecosistema de salud preventiva y correctiva, accesible y fácil de usar.
               </p>
             </div>
 
@@ -83,17 +83,17 @@ export default function Home() {
                 <ActivationStep
                   step="01"
                   title="Regístrate"
-                  description="Crea tu cuenta con tu número de tarjeta Sí Vale."
+                  description="Haz clic en 'Activar tu beneficio' y completa el formulario."
                 />
                 <ActivationStep
                   step="02"
-                  title="Valida"
-                  description="Verificamos tu información para activar tu acceso."
+                  title="Descarga la App"
+                  description="Encuentra 'ima' en la App Store o Google Play y descárgala."
                 />
                 <ActivationStep
                   step="03"
-                  title="Disfruta"
-                  description="Agenda tu primera consulta y comienza a cuidarte."
+                  title="Ingresa y Disfruta"
+                  description="Inicia sesión con tu correo y la contraseña que te enviamos."
                 />
               </div>
             </div>
@@ -117,7 +117,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-12">
           <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
             <div className="flex flex-col items-center gap-4 md:items-start">
-              <Logo />
+              <h1 className="text-3xl font-bold text-primary font-logo">ima</h1>
               <p className="text-sm text-foreground/60">© {new Date().getFullYear()} ima. Todos los derechos reservados.</p>
             </div>
             <div className="grid grid-cols-2 gap-8 text-center sm:grid-cols-3 md:text-left">
