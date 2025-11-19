@@ -13,12 +13,48 @@ const Logo = ({ className, size = 'default' }: { className?: string, size?: 'def
   return <span className={`font-bold text-primary font-logo ${sizeClasses[size]} ${className}`}>ima</span>
 }
 
+const UpSiValeLogo = ({ className }: { className?: string }) => (
+  <svg
+    width="150"
+    height="40"
+    viewBox="0 0 160 42"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M0 0H41.6667V41.6667H0V0Z"
+      fill="#F39223"
+    />
+    <path
+      d="M8.33301 10.833H15.833V25.833C15.833 28.333 15 30.4163 13.333 32.083C11.6663 33.7497 9.74967 34.583 7.58301 34.583C5.41634 34.583 3.58301 33.7497 2.08301 32.083C0.583008 30.4163 -0.250327 28.333 -0.250327 25.833H7.08301C7.08301 26.583 7.24967 27.208 7.58301 27.708C7.91634 28.208 8.33301 28.458 8.83301 28.458C9.33301 28.458 9.74967 28.208 10.083 27.708C10.4163 27.208 10.583 26.583 10.583 25.833V10.833H8.33301Z"
+      transform="translate(4.16699 0)"
+      fill="white"
+    />
+    <path
+      d="M23.9167 34.5833H31.6667V10.8333H23.9167V16.6667H18.9167V28.75H23.9167V34.5833Z"
+      fill="white"
+    />
+    <text style={{whiteSpace: 'pre'}} fill="#4A5456" fontWeight="bold" fontSize="20" fontFamily="Sora, sans-serif" letterSpacing="0.025em">
+      <tspan x="49" y="26">sí</tspan>
+      <tspan x="72" y="26">vale</tspan>
+    </text>
+    <text style={{whiteSpace: 'pre'}} fill="#4A5456" fontWeight="normal" fontSize="9" fontFamily="Sora, sans-serif">
+      <tspan x="49" y="38">El poder de crecer</tspan>
+    </text>
+  </svg>
+);
+
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <header className="container mx-auto flex items-center justify-between px-4 py-6">
-        <h1 className="text-3xl font-bold text-primary font-logo">ima</h1>
+        <div className="flex items-center gap-4">
+          <UpSiValeLogo />
+          <div className="border-l-2 border-gray-300 h-8"></div>
+          <h1 className="text-3xl font-bold text-primary font-logo">ima</h1>
+        </div>
         <Button>
           Activa tu beneficio <ArrowRight className="ml-2" />
         </Button>
