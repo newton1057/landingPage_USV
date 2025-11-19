@@ -93,7 +93,7 @@ export default function Home() {
                 <ActivationStep
                   step="03"
                   title="Ingresa y Disfruta"
-                  description="Inicia sesión con tu correo y la contraseña que te enviamos a tu correo."
+                  description="Inicia sesión con tu correo y la contraseña que te enviamos."
                 />
               </div>
             </div>
