@@ -107,8 +107,7 @@ const UpSiValeLogo = ({ className }: { className?: string }) => (
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
-      <header className="container mx-auto flex items-center justify-between px-4 py-6">
-        <UpSiValeLogo />
+      <header className="container mx-auto flex items-center justify-end px-4 py-6">
         <Button>
           Activa tu beneficio <ArrowRight className="ml-2" />
         </Button>
