@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Stethoscope, Apple, BrainCircuit, Facebook, Instagram, Twitter, ArrowRight } from "lucide-react";
+import { Sparkles, Camera, MessageCircle, Facebook, Instagram, Twitter, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const Logo = ({ className, size = 'default' }: { className?: string, size?: 'default' | 'large' | 'small' }) => {
@@ -52,19 +52,19 @@ export default function Home() {
             {/* Feature Cards */}
             <div className="mx-auto mt-16 grid max-w-md grid-cols-1 gap-8 sm:max-w-2xl lg:max-w-none lg:grid-cols-3">
               <FeatureCard
-                icon={<Stethoscope className="h-8 w-8 text-primary" />}
-                title="Consultas ilimitadas"
-                description="Habla con médicos generales y especialistas sin costo adicional."
+                icon={<Sparkles className="h-8 w-8 text-primary" />}
+                title="Descubre de cuántos años te vez"
+                description="Usa nuestra IA para analizar tu rostro y estimar tu edad."
               />
               <FeatureCard
-                icon={<Apple className="h-8 w-8 text-primary" />}
-                title="Nutrición personalizada"
-                description="Planes alimenticios diseñados para tus metas y necesidades."
+                icon={<Camera className="h-8 w-8 text-primary" />}
+                title="Analiza tu comida con una foto"
+                description="Toma una foto de tu platillo y conoce sus detalles nutricionales."
               />
               <FeatureCard
-                icon={<BrainCircuit className="h-8 w-8 text-primary" />}
-                title="Soporte psicológico"
-                description="Acompañamiento profesional para tu salud mental y emocional."
+                icon={<MessageCircle className="h-8 w-8 text-primary" />}
+                title="Chatea con ima sobre tu salud"
+                description="Obtén respuestas a tus preguntas de salud con nuestro asistente de IA."
               />
             </div>
           </div>
