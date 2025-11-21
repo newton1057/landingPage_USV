@@ -1,6 +1,6 @@
 "use client"
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardTitle } from "@/components/ui/card";
 import { Sparkles, Camera, ArrowRight, Facebook, Instagram, Twitter, Gift } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -176,7 +176,7 @@ export default function Home() {
               <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} ima. Todos los derechos reservados.</p>
             </div>
             <div className="grid grid-cols-2 gap-8 text-center sm:grid-cols-3 md:text-left">
-              <FooterLinks title="Legal" links={[{href: "#", text: "Aviso de privacidad"}, {href: "#", text: "Términos y condiciones"}]} />
+              <FooterLinks title="Legal" links={[{href: "https://preguntaleaima.com/aviso-de-privacidad/", text: "Aviso de privacidad"}, {href: "#", text: "Términos y condiciones"}]} />
               <FooterLinks title="Ayuda" links={[{href: "#", text: "Preguntas frecuentes"}, {href: "#", text: "Contacto"}]} />
               <FooterLinks title="Sitios" links={[{href: "https://www.sivale.mx/", text: "Sí Vale"}, {href: "https://preguntaleaima.com/", text: "ima"}]} />
             </div>
