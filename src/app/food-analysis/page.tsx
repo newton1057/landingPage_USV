@@ -11,6 +11,7 @@ import {
   Zap,
   Image as ImageIcon,
   Lock,
+  X,
 } from "lucide-react";
 import { NutritionCard, FoodAnalysisData } from "@/components/NutritionCard";
 
@@ -94,7 +95,7 @@ export default function FoodAnalysisPage() {
     setResponseError(null);
   };
 
-  const handleCapture = () => {
+  const handleCapture = async () => {
     if (status !== "ready") return;
     const video = videoRef.current;
     const canvas = canvasRef.current;
@@ -111,12 +112,15 @@ export default function FoodAnalysisPage() {
     resetResponseState();
     setShowPreview(true);
 
-    buildFileFromDataUrl(dataUrl)
-      .then((file) => setSelectedFile(file))
-      .catch((err) => {
-        console.error("No se pudo preparar la imagen para enviar", err);
-        setResponseError("No pudimos preparar la imagen para enviarla.");
-      });
+    try {
+      const file = await buildFileFromDataUrl(dataUrl);
+      setSelectedFile(file);
+      // Enviar automáticamente
+      await sendAnalysisRequest(file);
+    } catch (err) {
+      console.error("No se pudo preparar la imagen para enviar", err);
+      setResponseError("No pudimos preparar la imagen para enviarla.");
+    }
   };
 
   // Abrir galería (file picker)
@@ -130,12 +134,14 @@ export default function FoodAnalysisPage() {
     if (!file) return;
 
     const reader = new FileReader();
-    reader.onload = () => {
+    reader.onload = async () => {
       if (typeof reader.result === "string") {
         setCaptureUrl(reader.result);
         setSelectedFile(file);
         resetResponseState();
         setShowPreview(true);
+        // Enviar automáticamente
+        await sendAnalysisRequest(file);
       }
     };
     reader.readAsDataURL(file);
@@ -163,12 +169,7 @@ export default function FoodAnalysisPage() {
     setEmailModalOpen(false);
   };
 
-  const handleSendRequest = async () => {
-    if (!selectedFile) {
-      setResponseError("Primero toma o selecciona una foto.");
-      return;
-    }
-
+  const sendAnalysisRequest = async (file: File) => {
     if (!email) {
       setEmailError("Agrega tu correo para continuar.");
       setEmailModalOpen(true);
@@ -183,7 +184,7 @@ export default function FoodAnalysisPage() {
       const formData = new FormData();
       formData.append("email", email);
       formData.append("idApp", "upsivale.mx");
-      formData.append("file", selectedFile, selectedFile.name || "foto-comida.jpg");
+      formData.append("file", file, file.name || "foto-comida.jpg");
 
       const response = await fetch(
         "https://ima-authenticator-703555916890.northamerica-south1.run.app/services/foodPhotoPublic",
@@ -305,30 +306,24 @@ export default function FoodAnalysisPage() {
               <p className="text-sm font-semibold text-[#d9ff71]">Vista previa</p>
               <button
                 onClick={() => setShowPreview(false)}
-                className="rounded-full bg-[#1c2b24] px-3 py-1 text-xs text-[#d9ff71] transition-colors hover:bg-[#25372d]"
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-[#1c2b24] text-[#d9ff71] transition-colors hover:bg-[#25372d]"
+                aria-label="Cerrar"
               >
-                Cerrar
+                <X className="h-4 w-4" />
               </button>
             </div>
             <div className="space-y-4 p-4">
-              {!responseData && (
-                <div className="overflow-hidden rounded-xl border border-[#9ff75f]/30 bg-black">
-                  <img
-                    src={captureUrl}
-                    alt="Captura de comida"
-                    className="h-full w-full object-cover"
-                  />
+              {isSending && (
+                <div className="flex flex-col items-center justify-center py-12 space-y-4">
+                  <div className="relative">
+                    <div className="h-16 w-16 rounded-full border-4 border-[#9ff75f]/20"></div>
+                    <div className="absolute top-0 h-16 w-16 animate-spin rounded-full border-4 border-transparent border-t-[#d9ff71]"></div>
+                  </div>
+                  <p className="text-sm text-[#d9ff71] font-medium">Analizando tu alimento...</p>
+                  <p className="text-xs text-[#b7f26c] text-center max-w-xs">
+                    Estamos procesando la imagen para obtener información nutricional precisa.
+                  </p>
                 </div>
-              )}
-              {!responseData && (
-                <Button
-                  type="button"
-                  onClick={handleSendRequest}
-                  disabled={isSending || !selectedFile}
-                  className="w-full rounded-full bg-[#3d5b35] text-[#e8ff9c] text-base font-semibold hover:bg-[#4a6b43]"
-                >
-                  {isSending ? "Enviando..." : "Enviar para analizar"}
-                </Button>
               )}
 
               {responseError && (
