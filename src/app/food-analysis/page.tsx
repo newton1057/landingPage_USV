@@ -311,21 +311,25 @@ export default function FoodAnalysisPage() {
               </button>
             </div>
             <div className="space-y-4 p-4">
-              <div className="overflow-hidden rounded-xl border border-[#9ff75f]/30 bg-black">
-                <img
-                  src={captureUrl}
-                  alt="Captura de comida"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <Button
-                type="button"
-                onClick={handleSendRequest}
-                disabled={isSending || !selectedFile}
-                className="w-full rounded-full bg-[#3d5b35] text-[#e8ff9c] text-base font-semibold hover:bg-[#4a6b43]"
-              >
-                {isSending ? "Enviando..." : "Enviar para analizar"}
-              </Button>
+              {!responseData && (
+                <div className="overflow-hidden rounded-xl border border-[#9ff75f]/30 bg-black">
+                  <img
+                    src={captureUrl}
+                    alt="Captura de comida"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              )}
+              {!responseData && (
+                <Button
+                  type="button"
+                  onClick={handleSendRequest}
+                  disabled={isSending || !selectedFile}
+                  className="w-full rounded-full bg-[#3d5b35] text-[#e8ff9c] text-base font-semibold hover:bg-[#4a6b43]"
+                >
+                  {isSending ? "Enviando..." : "Enviar para analizar"}
+                </Button>
+              )}
 
               {responseError && (
                 <p className="text-sm text-red-300">{responseError}</p>
