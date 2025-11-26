@@ -14,14 +14,14 @@ export default function Home() {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <header className="container mx-auto flex items-center justify-between px-4 py-6">
         <div className="flex items-center gap-4">
-          <Image 
-            src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2FS%C3%AD%20Vale%2FSv_logo1.svg?alt=media&token=5e4d468c-7f2e-48ff-bdc7-9979c61d94ae" 
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2FS%C3%AD%20Vale%2FSv_logo1.svg?alt=media&token=5e4d468c-7f2e-48ff-bdc7-9979c61d94ae"
             alt="Up SíVale Logo"
             width={100}
             height={32}
             className="h-8 w-auto"
           />
-          <Image 
+          <Image
             src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2Fima%2Flogoslonileblue.png?alt=media&token=712acefa-2a3a-411d-9842-f94d944df8ec"
             alt="Ima Logo"
             width={80}
@@ -30,7 +30,7 @@ export default function Home() {
           />
         </div>
         <Button asChild>
-          <Link href="#">
+          <Link href="https://buy.stripe.com/cNicN5ctseNIfV3et19fW09">
             Activa tu beneficio <ArrowRight className="ml-2" />
           </Link>
         </Button>
@@ -47,7 +47,7 @@ export default function Home() {
           </p>
           <div className="mt-10">
             <Button size="lg" asChild>
-              <Link href="#">
+              <Link href="https://buy.stripe.com/cNicN5ctseNIfV3et19fW09">
                 Activa tu beneficio ahora <ArrowRight className="ml-2" />
               </Link>
             </Button>
@@ -88,24 +88,24 @@ export default function Home() {
 
         {/* Gift Section */}
         <section id="gift" className="py-20 sm:py-24">
-            <div className="container mx-auto px-4">
-                <div className="mx-auto max-w-3xl text-center bg-background p-8 sm:p-12 rounded-xl border border-primary/20 shadow-lg shadow-primary/5">
-                    <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mb-6">
-                        <Gift className="h-8 w-8 text-primary" />
-                    </div>
-                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline text-primary">Un regalo de Sí Vale para ti</h2>
-                    <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
-                        Activa tu beneficio y disfruta de <span className="font-bold text-foreground">un mes de acceso total a ima</span>, cortesía de Sí Vale. Sin costo, sin compromisos.
-                    </p>
-                    <div className="mt-8">
-                        <Button size="lg" asChild>
-                            <Link href="#">
-                              Obtener mi mes gratis <ArrowRight className="ml-2" />
-                            </Link>
-                        </Button>
-                    </div>
-                </div>
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-3xl text-center bg-background p-8 sm:p-12 rounded-xl border border-primary/20 shadow-lg shadow-primary/5">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mb-6">
+                <Gift className="h-8 w-8 text-primary" />
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline text-primary">Un regalo de Sí Vale para ti</h2>
+              <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
+                Activa tu beneficio y disfruta de <span className="font-bold text-foreground">un mes de acceso total a ima</span>, cortesía de Sí Vale. Sin costo, sin compromisos.
+              </p>
+              <div className="mt-8">
+                <Button size="lg" asChild>
+                  <Link href="https://buy.stripe.com/cNicN5ctseNIfV3et19fW09">
+                    Obtener mi mes gratis <ArrowRight className="ml-2" />
+                  </Link>
+                </Button>
+              </div>
             </div>
+          </div>
         </section>
 
         {/* Activation Steps Section */}
@@ -121,12 +121,12 @@ export default function Home() {
                 <ActivationStep
                   step="01"
                   title="Regístrate"
-                  description="Haz clic en 'Activar tu beneficio' y completa tu información."
+                  description="Haz clic en 'Activar tu beneficio' y completa tu información. Puedes cancelar cuando quieras."
                 />
                 <ActivationStep
                   step="02"
                   title="Descarga la App"
-                  description="Busca 'ima' en la App Store o Google Play y descárgala."
+                  description={<>Busca 'ima' en la <Link href="https://apps.apple.com/us/app/ima-mi-asistente-de-salud/id6744655832" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">App Store</Link> o <Link href="https://play.google.com/store/apps/details?id=technologies.tori.ima" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Google Play</Link> y descárgala.</>}
                 />
                 <ActivationStep
                   step="03"
@@ -137,14 +137,14 @@ export default function Home() {
             </div>
           </div>
         </section>
-        
+
         {/* Final CTA Section */}
         <section className="py-20 text-center sm:py-24">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">Empieza a cuidar de ti hoy mismo</h2>
             <div className="mt-8">
               <Button size="lg" asChild>
-                <Link href="#">
+                <Link href="https://buy.stripe.com/cNicN5ctseNIfV3et19fW09">
                   Activar mi beneficio <ArrowRight className="ml-2" />
                 </Link>
               </Button>
@@ -158,27 +158,27 @@ export default function Home() {
           <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
             <div className="flex flex-col items-center gap-4 md:items-start">
               <div className="flex items-center gap-4">
-                  <Image 
-                    src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2FS%C3%AD%20Vale%2FSv_logo1.svg?alt=media&token=5e4d468c-7f2e-48ff-bdc7-9979c61d94ae" 
-                    alt="Up SíVale Logo"
-                    width={100}
-                    height={32}
-                    className="h-8 w-auto"
-                  />
-                  <Image 
-                    src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2Fima%2Flogoslonileblue.png?alt=media&token=712acefa-2a3a-411d-9842-f94d944df8ec"
-                    alt="Ima Logo"
-                    width={80}
-                    height={32}
-                    className="h-8 w-auto"
-                  />
+                <Image
+                  src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2FS%C3%AD%20Vale%2FSv_logo1.svg?alt=media&token=5e4d468c-7f2e-48ff-bdc7-9979c61d94ae"
+                  alt="Up SíVale Logo"
+                  width={100}
+                  height={32}
+                  className="h-8 w-auto"
+                />
+                <Image
+                  src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2Fima%2Flogoslonileblue.png?alt=media&token=712acefa-2a3a-411d-9842-f94d944df8ec"
+                  alt="Ima Logo"
+                  width={80}
+                  height={32}
+                  className="h-8 w-auto"
+                />
               </div>
               <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} ima. Todos los derechos reservados.</p>
             </div>
             <div className="grid grid-cols-2 gap-8 text-center sm:grid-cols-3 md:text-left">
-              <FooterLinks title="Legal" links={[{href: "https://preguntaleaima.com/aviso-de-privacidad/", text: "Aviso de privacidad"}, {href: "https://preguntaleaima.com/terminos-y-condiciones/", text: "Términos y condiciones"}]} />
-              <FooterLinks title="Ayuda" links={[{href: "https://preguntaleaima.com/preguntas/", text: "Preguntas frecuentes"}, {href: "https://preguntaleaima.com/contacto/", text: "Contacto"}]} />
-              <FooterLinks title="Sitios" links={[{href: "https://www.sivale.mx/", text: "Sí Vale"}, {href: "https://preguntaleaima.com/", text: "ima"}]} />
+              <FooterLinks title="Legal" links={[{ href: "https://preguntaleaima.com/aviso-de-privacidad/", text: "Aviso de privacidad" }, { href: "https://preguntaleaima.com/terminos-y-condiciones/", text: "Términos y condiciones" }]} />
+              <FooterLinks title="Ayuda" links={[{ href: "https://preguntaleaima.com/preguntas/", text: "Preguntas frecuentes" }, { href: "https://preguntaleaima.com/contacto/", text: "Contacto" }]} />
+              <FooterLinks title="Sitios" links={[{ href: "https://www.sivale.mx/", text: "Sí Vale" }, { href: "https://preguntaleaima.com/", text: "ima" }]} />
             </div>
             <div className="flex items-center gap-4">
               <Link href="https://www.facebook.com/preguntaleaima/?locale=es_LA" className="text-muted-foreground hover:text-primary" aria-label="Facebook"><Facebook /></Link>
@@ -227,7 +227,7 @@ function FeatureCard({ icon, title, description, imageUrl, imageHint, href }: { 
   return content;
 }
 
-function ActivationStep({ step, title, description }: { step: string; title: string; description: string }) {
+function ActivationStep({ step, title, description }: { step: string; title: string; description: React.ReactNode }) {
   return (
     <div className="relative text-center">
       <div className="relative z-10 flex h-24 w-24 items-center justify-center rounded-full bg-background border-2 border-primary mx-auto">
