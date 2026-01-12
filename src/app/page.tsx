@@ -22,11 +22,11 @@ export default function Home() {
             className="h-8 w-auto"
           />
           <Image
-            src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2Fima%2Flogoslonileblue.png?alt=media&token=712acefa-2a3a-411d-9842-f94d944df8ec"
-            alt="Ima Logo"
-            width={80}
-            height={32}
-            className="h-8 w-auto"
+            src="/demood-logo.png"
+            alt="Demood Logo"
+            width={120}
+            height={48}
+            className="h-12 w-auto"
           />
         </div>
         <Button asChild>
@@ -40,10 +40,10 @@ export default function Home() {
         {/* Hero Section */}
         <section className="container mx-auto flex flex-col items-center px-4 py-20 text-center sm:py-32">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl font-headline">
-            Tu bienestar, nuestra prioridad.
+            Entra en el estado de transformación.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Con Sí Vale, accede a más de 25 herramientas de prevención y bienestar, potenciadas por la inteligencia artificial de ima para que tomes el control de tu salud.
+            Gracias a Up Sí Vale, ahora tienes el control. El proceso inteligente de demood traduce la tecnología en acciones claras, acompañándote día a día para que logres cambios reales sin romper tu ritmo de vida actual.
           </p>
           <div className="mt-10">
             <Button size="lg" asChild>
@@ -58,9 +58,9 @@ export default function Home() {
         <section id="what-is-ima" className="py-20 sm:py-24 bg-secondary/50">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline flex items-center justify-center gap-2">¿Qué es <Image src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2Fima%2Flogoslonileblue.png?alt=media&token=712acefa-2a3a-411d-9842-f94d944df8ec" alt="Ima Logo" width={120} height={48} className="h-12 w-auto" />?</h2>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline flex items-center justify-center gap-2">¿Qué es <Image src="/demood-logo.png" alt="Demood Logo" width={120} height={48} className="h-12 w-auto" />?</h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                <span className="font-bold">ima</span> es tu aliado para el bienestar integral. Te ofrecemos un ecosistema de salud preventiva y correctiva, accesible y fácil de usar.
+                <span className="font-bold">demood</span> no es una app de hábitos ni fitness genérica. Es un sistema de transformación física en bloques de 30 días, guiado por inteligencia artificial. Es el estado donde eliminas el ruido y las dudas para enfocarte únicamente en avanzar, sin romper tu vida real.
               </p>
             </div>
 
@@ -95,12 +95,12 @@ export default function Home() {
               </div>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline text-primary">Un regalo de Sí Vale para ti</h2>
               <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
-                Activa tu beneficio y disfruta de <span className="font-bold text-foreground">un mes de acceso total a ima</span>, cortesía de Sí Vale. Sin costo, sin compromisos.
+                Activa tu beneficio y completa tu <span className="font-bold text-foreground">primer ciclo </span>de acceso total a<span className="font-bold text-foreground"> demood.</span> Sin costo, sin compromisos. Al terminar tus primeros 30 días, habrás entrado en el estado de transformación que estabas buscando.
               </p>
               <div className="mt-8">
                 <Button size="lg" asChild>
                   <Link href="https://buy.stripe.com/cNicN5ctseNIfV3et19fW09">
-                    Obtener mi mes gratis <ArrowRight className="ml-2" />
+                    Iniciar mi primer ciclo gratis <ArrowRight className="ml-2" />
                   </Link>
                 </Button>
               </div>
@@ -126,7 +126,7 @@ export default function Home() {
                 <ActivationStep
                   step="02"
                   title="Descarga la App"
-                  description={<>Busca 'ima' en la <Link href="https://apps.apple.com/us/app/ima-mi-asistente-de-salud/id6744655832" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">App Store</Link> o <Link href="https://play.google.com/store/apps/details?id=technologies.tori.ima" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Google Play</Link> y descárgala.</>}
+                  description={<>Busca 'demood' en la <Link href="https://apps.apple.com/us/app/ima-mi-asistente-de-salud/id6744655832" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">App Store</Link> o <Link href="https://play.google.com/store/apps/details?id=technologies.tori.ima" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Google Play</Link> y descárgala.</>}
                 />
                 <ActivationStep
                   step="03"
@@ -166,19 +166,19 @@ export default function Home() {
                   className="h-8 w-auto"
                 />
                 <Image
-                  src="https://firebasestorage.googleapis.com/v0/b/aurora-4e980.appspot.com/o/logos%2Fima%2Flogoslonileblue.png?alt=media&token=712acefa-2a3a-411d-9842-f94d944df8ec"
-                  alt="Ima Logo"
-                  width={80}
-                  height={32}
-                  className="h-8 w-auto"
+                  src="/demood-logo.png"
+                  alt="Demood Logo"
+                  width={120}
+                  height={48}
+                  className="h-12 w-auto"
                 />
               </div>
-              <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} ima. Todos los derechos reservados.</p>
+              <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} demood. Todos los derechos reservados.</p>
             </div>
             <div className="grid grid-cols-2 gap-8 text-center sm:grid-cols-3 md:text-left">
               <FooterLinks title="Legal" links={[{ href: "https://preguntaleaima.com/aviso-de-privacidad/", text: "Aviso de privacidad" }, { href: "https://preguntaleaima.com/terminos-y-condiciones/", text: "Términos y condiciones" }]} />
               <FooterLinks title="Ayuda" links={[{ href: "https://preguntaleaima.com/preguntas/", text: "Preguntas frecuentes" }, { href: "https://preguntaleaima.com/contacto/", text: "Contacto" }]} />
-              <FooterLinks title="Sitios" links={[{ href: "https://www.sivale.mx/", text: "Sí Vale" }, { href: "https://preguntaleaima.com/", text: "ima" }]} />
+              <FooterLinks title="Sitios" links={[{ href: "https://www.sivale.mx/", text: "Sí Vale" }, { href: "https://preguntaleaima.com/", text: "demood" }]} />
             </div>
             <div className="flex items-center gap-4">
               <Link href="https://www.facebook.com/preguntaleaima/?locale=es_LA" className="text-muted-foreground hover:text-primary" aria-label="Facebook"><Facebook /></Link>

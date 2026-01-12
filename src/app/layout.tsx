@@ -1,9 +1,9 @@
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'ima. | Sí Vale Landing Page',
+  title: 'demood | Sí Vale Landing Page',
   description: 'Tu bienestar, nuestra prioridad. Accede a consultas médicas, nutricionales y psicológicas ilimitadas con tu vale Sí Vale.',
 };
 
