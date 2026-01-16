@@ -6,6 +6,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
+import { ContactFormDialog } from "@/components/contact-form-dialog";
+
 export default function Home() {
   const ageEstimationImage = PlaceHolderImages.find(img => img.id === 'age-estimation');
   const foodAnalysisImage = PlaceHolderImages.find(img => img.id === 'food-analysis');
@@ -126,7 +128,7 @@ export default function Home() {
                 <ActivationStep
                   step="02"
                   title="Descarga la App"
-                  description={<>Busca 'demood' en la <Link href="https://apps.apple.com/us/app/ima-mi-asistente-de-salud/id6744655832" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">App Store</Link> o <Link href="https://play.google.com/store/apps/details?id=technologies.tori.ima" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Google Play</Link> y descárgala.</>}
+                  description="Busca 'demood' en la App Store o Google Play y descárgala."
                 />
                 <ActivationStep
                   step="03"
@@ -176,14 +178,22 @@ export default function Home() {
               <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} demood. Todos los derechos reservados.</p>
             </div>
             <div className="grid grid-cols-2 gap-8 text-center sm:grid-cols-3 md:text-left">
-              <FooterLinks title="Legal" links={[{ href: "https://preguntaleaima.com/aviso-de-privacidad/", text: "Aviso de privacidad" }, { href: "https://preguntaleaima.com/terminos-y-condiciones/", text: "Términos y condiciones" }]} />
-              <FooterLinks title="Ayuda" links={[{ href: "https://preguntaleaima.com/preguntas/", text: "Preguntas frecuentes" }, { href: "https://preguntaleaima.com/contacto/", text: "Contacto" }]} />
-              <FooterLinks title="Sitios" links={[{ href: "https://www.sivale.mx/", text: "Sí Vale" }, { href: "https://preguntaleaima.com/", text: "demood" }]} />
+              <FooterLinks title="Legal" links={[{ href: "https://demood.app/privacy", text: "Aviso de privacidad" }, { href: "https://demood.app/privacy", text: "Términos y condiciones" }]} />
+              <div className="flex flex-col gap-3">
+                <h4 className="font-bold text-foreground font-headline">Ayuda</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <ContactFormDialog>
+                      <button className="text-sm text-muted-foreground hover:text-primary hover:underline">
+                        Contacto
+                      </button>
+                    </ContactFormDialog>
+                  </li>
+                </ul>
+              </div>
+              <FooterLinks title="Sitios" links={[{ href: "https://www.sivale.mx/", text: "Sí Vale" }, { href: "https://demood.app/", text: "demood" }]} />
             </div>
-            <div className="flex items-center gap-4">
-              <Link href="https://www.facebook.com/preguntaleaima/?locale=es_LA" className="text-muted-foreground hover:text-primary" aria-label="Facebook"><Facebook /></Link>
-              <Link href="https://www.instagram.com/preguntaleaima/" className="text-muted-foreground hover:text-primary" aria-label="Instagram"><Instagram /></Link>
-            </div>
+
           </div>
         </div>
       </footer>
